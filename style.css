@@ -1,0 +1,51 @@
+.container {
+  width: 75%;
+  border: 1px solid black;
+  background-color: cadetblue;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#logo {
+  width: 3em;
+  height: 3em;
+}
+
+.box {
+  width: 15%;
+  background-color: grey;
+  margin: 10px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.resultBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#currentBox {
+  margin: 1em auto;
+}
+/*# sourceMappingURL=style.css.map */

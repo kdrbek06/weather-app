@@ -1,0 +1,43 @@
+
+.container {
+    width: 75%;
+    border: 1px solid black;
+    background-color: cadetblue;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#logo {
+    width: 3em;
+    height: 3em;
+    
+}
+
+.box{
+    width: 15%;
+    background-color: grey;
+    margin: 10px;
+    height: 250px;
+    border-radius: 10px;
+}
+.resultBox {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    h1{
+        
+    }
+}
+
+#currentBox{
+    margin: 1em auto;
+
+}
