@@ -1,26 +1,46 @@
 const apiKey = "d865f40a995be1311f0b106a8c307587"
-/* axios.get("http://api.openweathermap.org/data/2.5/forecast?q=eindhoven&appid=d865f40a995be1311f0b106a8c307587&units=metric") */
-/* .then(res => console.log(res.data.list[0].main.temp)); */
-
 
 const updateData =  function(data){
     console.log(data);
 
 
-    
-    document.getElementById('currentImg').src = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
+    document.getElementById('img0').src = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
     document.getElementById('cityName').innerHTML = data.city.name
     document.getElementById('weatherDescription').innerHTML = data.list[0].weather[0].description;
-    document.getElementById('temp').innerHTML = `Now:   ${Math.floor(data.list[0].main.temp)}  °C`;
-    document.getElementById('tempFeel').innerHTML = `Feels Like:   ${Math.floor(data.list[0].main.feels_like)}  °C`;
-    document.getElementById('tempMin').innerHTML = `Min:   ${Math.floor(data.list[0].main.temp)}  °C`;
-    document.getElementById('tempMax').innerHTML = `Max:   ${Math.floor(data.list[0].main.temp)}  °C`;
-    document.getElementById('humidity').innerHTML = `Humidity:  % ${Math.floor(data.list[0].main.humidity)}  `;
+    document.getElementById('temp0').innerHTML = `Now:   ${Math.round(data.list[0].main.temp)}  °C`;
+    document.getElementById('feel0').innerHTML = `Feels Like:   ${Math.round(data.list[0].main.feels_like)}  °C`;
+    document.getElementById('min0').innerHTML = `Min:   ${Math.round(data.list[0].main.temp_min)}  °C`;
+    document.getElementById('max0').innerHTML = `Max:   ${Math.round(data.list[0].main.temp_max)}  °C`;
+    document.getElementById('humidity0').innerHTML = `Humidity:  % ${Math.round(data.list[0].main.humidity)}`;
 
-    /* let img = document.getElementById('currentImg'); */
-    // img.setAttribute('src',  `"http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png"`);
 
+    for(let i = 1; i < 6; i++){
+        document.getElementById(`img${i}`).src = `http://openweathermap.org/img/wn/${data.list[i*8-1].weather[0].icon}@2x.png`;
+        document.getElementById(`min${i}`).innerHTML = `Min:   ${Math.round(data.list[i*8-1].main.temp_min)}  °C`;
+        document.getElementById(`max${i}`).innerHTML = `Max:   ${Math.round(data.list[i*8-1].main.temp_max)}  °C`;
+        document.getElementById(`desc${i}`).innerHTML = data.list[i*8-1].weather[0].description;
+        
+    };
+    var newArray = [];
+    for(let i = 0; i < 9 ; i++){
+        newArray.push(`${Math.round(data.list[i].main.temp)}`)
+     };
+ console.log(newArray);
 };
+
+
+
+
+
+/* var avarage = () => {
+        for(let i = 0; i < 9 ; i++){
+           newArray.push(`${Math.round(data.list[i].main.temp)}`)
+        };
+    console.log(newArray);
+};
+ */
+
+
 
 document.getElementById('searchButton').addEventListener('click', () =>{
     let inputCity= document.getElementById('inputBox').value
@@ -31,4 +51,3 @@ document.getElementById('searchButton').addEventListener('click', () =>{
 
 
 
-// http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png

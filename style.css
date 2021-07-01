@@ -1,6 +1,7 @@
 body {
   background-image: url(cloud-blue-sky.jpg);
   background-size: cover;
+  text-transform: capitalize;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
   width: 15%;
   background-color: grey;
   margin: 10px;
-  height: 250px;
+  height: 200px;
   border-radius: 10px;
 }
 
@@ -66,5 +67,9 @@ body {
   backdrop-filter: blur(10px);
   /* Chrome and Opera */
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+a:link {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
