@@ -5,12 +5,11 @@ body {
 }
 .container {
     width: 75%;
-/*     border: 1px solid black;
- */    margin: 0 auto;
+    margin: 0 auto;
     text-align: center;
     padding: 20px;
-/*     border-radius: 10px;
- */}
+    border-radius: 15px;
+ }
 
 #logo {
     width: 3em;
@@ -19,9 +18,9 @@ body {
 }
 
 .box{
-    width: 15%;
+    width: 25%;
     background-color: grey;
-    margin: 10px;
+    margin: 1.5rem;
     height: 200px;
     border-radius: 10px;
 }
@@ -40,8 +39,8 @@ body {
 
 #currentBox{
     margin: 1em auto;
-    width: 40%;
-    height: 350px;
+    width: 35%;
+    height: 300px;
 
 }
 
